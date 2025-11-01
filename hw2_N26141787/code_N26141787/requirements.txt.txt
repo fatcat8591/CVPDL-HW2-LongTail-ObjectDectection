@@ -1,0 +1,19 @@
+python3 -m venv .venv
+pip install --upgrade pip
+pip install opencv-python-headless tqdm ultralytics pyyaml
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121p
+pip install pandas
+
+
+以下紀錄程式碼中會import甚麼package，基本上只要在bash terminal中執行上面那幾的pip install，下面這些import package就能正確執行了，請記得使用venv
+import os
+import random
+import shutil
+from pathlib import Path
+import cv2
+from tqdm import tqdm
+from ultralytics import YOLO
+import argparse
+import yaml
+import re
+import pandas as pd
